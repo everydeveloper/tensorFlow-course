@@ -9,7 +9,7 @@ tags:
 
 template:
   name: TensorFlow Course
-  repo: tensorFlow-course-repo
+  repo: tensorFlow-course-template
 before:
   - type: createIssue
     title: Introduction
