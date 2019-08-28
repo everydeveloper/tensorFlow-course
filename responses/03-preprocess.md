@@ -9,4 +9,4 @@ Two vital notes about the above. 1. Use the value "255.0". This value is a float
 
 *Enter a comment (TRUE or FALSE) about the following statement:*
 
-_After pre-processing the data, all of the pixel values will always add up to 1_
+_We need to rescale both the images and labels, so they are on the same scale._

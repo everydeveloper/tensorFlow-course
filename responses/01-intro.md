@@ -18,4 +18,4 @@ _This is an interactive tutorial where you will be prompted to do something at t
 
 *Enter a comment (TRUE or FALSE) about the following statement:*
 
-_"Before starting a machine learning project, you often need select and process some of the data"_
+_"Before starting a machine learning project, you often need to select and process some of the data"_

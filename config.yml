@@ -2,14 +2,14 @@ title: TensorFlow
 tagline: Learn the basics of TensorFlow (machine learning with python)
 description: Machine Learning (ML)/Neural Network (NN) tools have recently made a huge splash with applications in data analysis, image classification, and data generation. Here we will use the Fashion MNIST dataset to classify images of clothing.
 tags:
-  - Tensor flow
+  - TensorFlow
   - Python
   - Machine learning
   - Neural network
 
 template:
   name: Tensor Flow Course
-  repo: false
+  repo: tensorFlow-course-repo
 before:
   - type: createIssue
     title: Introduction
