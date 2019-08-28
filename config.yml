@@ -8,7 +8,7 @@ tags:
   - Neural network
 
 template:
-  name: Tensor Flow Course
+  name: TensorFlow Course
   repo: tensorFlow-course-repo
 before:
   - type: createIssue
