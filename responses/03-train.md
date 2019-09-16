@@ -1,10 +1,17 @@
+*That's right!* ✔️
+
+Softmax activation not only flattens each value (between 0 and 1) but also scales everything to add up to 1.
+
 ## Training the Model
 Models must be both compiled and trained prior to use.  When compiling we must define a few more parameters that control how models are updated during training (optimizer), how the model's accuracy is measured during training (loss function), and what is to be measured to determine the model's accuracy (metrics). These values were selected for this project, yet are generally dependent on the model's intent and expected input and output.
+
 ```console
 >>> model.compile( optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
 >>>
 ```
+
 Now we can begin training our model! Now, with already having generated and compiled the model, the code required to train the model is a single line.
+
 ```console
 >>> model.fit(train_images, train_labels, epochs=5)
 
@@ -22,7 +29,11 @@ Epoch 5/5
 <tensorflow.python.keras.callbacks.History object at 0x00000133F219C470>
 >>>
 ```
-This single line completes the entire job of training our model, but let's take a brief look at the arguments provided to the model.fit command. The first argument is input data, and recall that our input Flatten layer takes a (28,28) array, conforming to the dimensionality of our images. Now we train the system by providing the correct classification for all the training examples, this is the second argument of the model.fit command. The final argument is the number of epochs undertaken during training; each epoch is a training cycle over all the training data.  Our setting the epoch value to 5 means that the model will be trained overall 60,000 training examples 5 times. After each epoch, we get both the value of the loss function and the model's accuracy (88.97% after epoch 5) at this epoch.
+
+This single line completes the entire job of training our model, but let's take a brief look at the arguments provided to the model.fit command. 
+1. The first argument is input data, and recall that our input Flatten layer takes a (28,28) array, conforming to the dimensionality of our images. 
+2. Next we train the system by providing the correct classification for all the training examples.
+3. The final argument is the number of epochs undertaken during training; each epoch is a training cycle over all the training data.  Our setting the epoch value to 5 means that the model will be trained overall 60,000 training examples 5 times. After each epoch, we get both the value of the loss function and the model's accuracy (88.97% after epoch 5) at this epoch.
 
 *Leave a comment with the answer to this question:*
 
