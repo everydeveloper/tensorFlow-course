@@ -1,12 +1,11 @@
-title: Introduction to TensorFlow
-tagline: Learn the basics of TensorFlow (machine learning with python)
-description: Machine Learning (ML)/Neural Network (NN) tools have recently made a huge splash with applications in data analysis, image classification, and data generation. Here we will use the Fashion MNIST dataset to classify images of clothing.
+title: TensorFlow Image Processing
+tagline: Learn the basics of image-based TensorFlow machine learning with Python
+description: Get started with Machine Learning (ML)/Neural Network (NN) tools
 tags:
   - TensorFlow
   - Python
   - Machine learning
   - Neural network
-
 template:
   name: TensorFlow Course
   repo: tensorFlow-course-template
@@ -14,32 +13,30 @@ before:
   - type: createIssue
     title: Introduction
     body: 01-intro.md
-
 steps:
   - title: Introduction
     description: Introduction to Machine Learning
     event: issue_comment
-    link: "{{ repoUrl }}/issues/1"
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: 'TRUE'
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 1
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: 'TRUE'
       - type: respond
         with: 01-install.md
         issue: 1
-
   - title: Install and Setup
     description: Install and setup environment
     event: issues.closed
-    link: "{{ repoUrl }}/issues/1"
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: createIssue
         title: Import Packages
@@ -47,40 +44,37 @@ steps:
       - type: respond
         with: 01-complete.md
         issue: 1
-
   - title: Using Pip
     description: Use Pip to Import machine learning packages in the command line
     event: issue_comment
-    link: "{{ repoUrl }}/issues/2"
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: B
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 2
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: B
       - type: respond
         with: 02-packages.md
         issue: 2
-
   - title: Importing Pip Packages
-    description: import Numpy, MatPlotLib, and TensorFlow libraries
+    description: 'import Numpy, MatPlotLib, and TensorFlow libraries'
     event: issue_comment
-    link: "{{ repoUrl }}/issues/2"
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: respond
         with: 02-test-image.md
         issue: 2
-
   - title: Testing image data
     description: Test our libraries by displaying an image
     event: issues.closed
-    link: "{{ repoUrl }}/issues/2"
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: createIssue
         title: MakeModel
@@ -88,81 +82,77 @@ steps:
       - type: respond
         with: 02-complete.md
         issue: 2
-
   - title: Preprocess dataset
     description: Prepare dataset for machine learning
     event: issue_comment
-    link: "{{ repoUrl }}/issues/3"
+    link: '{{ repoUrl }}/issues/3'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: 'FALSE'
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 3
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: 'FALSE'
       - type: respond
         with: 03-model.md
         issue: 3
-
   - title: Model Generation
     description: Prepare dataset for machine learning
     event: issue_comment
-    link: "{{ repoUrl }}/issues/3"
+    link: '{{ repoUrl }}/issues/3'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: 'TRUE'
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 3
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: 'TRUE'
       - type: respond
         with: 03-train.md
         issue: 3
-
   - title: Training Model
     description: Train our model to recognize articles of clothing
     event: issue_comment
-    link: "{{ repoUrl }}/issues/3"
+    link: '{{ repoUrl }}/issues/3'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: 2
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 3
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: 2
       - type: respond
         with: 03-eval.md
         issue: 3
-
   - title: Evaluating Model
     description: Train our model to recognize articles of clothing
     event: issue_comment
-    link: "{{ repoUrl }}/issues/3"
+    link: '{{ repoUrl }}/issues/3'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: C
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 3
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: C
       - type: respond
